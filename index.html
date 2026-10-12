@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <p class="eyebrow">STUDENT PRODUCTIVITY</p>
+      <h1>My To-Do List</h1>
+      <p class="subtitle">Plan your day, one task at a time.</p>
+    </header>
+
+    <section class="task-entry" aria-label="Add a task">
+      <label class="sr-only" for="taskInput">New task</label>
+      <input id="taskInput" type="text" placeholder="e.g. Finish mathematics homework" maxlength="140" />
+      <button id="addButton" type="button">Add task</button>
+    </section>
+
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+
+    <section class="summary" aria-label="Task summary">
+      <span id="taskCount">0 tasks</span>
+      <span id="completedCount">0 completed</span>
+    </section>
+
+    <ul id="taskList" class="task-list" aria-label="Your tasks"></ul>
+
+    <div id="emptyState" class="empty-state">
+      <span class="empty-icon" aria-hidden="true">✓</span>
+      <h2>You're all caught up!</h2>
+      <p>Add a task above to get started.</p>
+    </div>
+
+    <footer class="app-footer">
+      <button id="clearCompleted" class="text-button" type="button">Clear completed</button>
+      <span>Tasks are saved on this device.</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
